@@ -142,6 +142,7 @@ nav {
   width: 113px;
   height: 68px;
   cursor: pointer;
+  margin-left: 130px;
 }
 .btn-comprar {
   width: max-content;
