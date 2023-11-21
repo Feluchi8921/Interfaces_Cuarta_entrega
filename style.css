@@ -429,6 +429,7 @@ nav {
 .tituloCardM {
   margin-top: 254.5px;
   margin-bottom: 69px;
+  margin-left: 100px;
 }
 .cardM1 img {
   width: 552px;
@@ -648,7 +649,6 @@ footer img{
 
   section#cont1, section#cont2, section#cont3, section#cont4{
     margin-top: 40px;
-    align-items: center;
   }
   section#cont1{
     background-image: url(img/cardM1.svg);
@@ -673,3 +673,10 @@ footer img{
 .duende {
   transition: transform 0.5s ease-out;
 }
+
+/*-------------------Btn comprar-----------*/
+.btn-comprar:active, .btn-comprar:hover{
+  background: linear-gradient(180deg, var(--azul), orange);
+  color: white;
+}
+

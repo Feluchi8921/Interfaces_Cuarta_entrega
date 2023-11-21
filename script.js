@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const scrollValue = window.scrollY;
         const speed = 0.3;
 
-        // Se detiene el movimiento a los 900px de scroll
+        // Se detiene el movimiento a los 800px de scroll
         if (scrollValue <= 800) {
             duende.style.transform = `translateY(${scrollValue * speed}px)`;
         }
