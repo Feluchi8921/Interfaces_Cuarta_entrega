@@ -20,3 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
 });
 
+/*----------Duende--------------*/
+document.addEventListener("DOMContentLoaded", function () {
+    const duende = document.querySelector(".duende");
+    
+    window.addEventListener("scroll", function () {
+        const scrollValue = window.scrollY;
+        const speed = 0.3;
+
+        // Se detiene el movimiento a los 900px de scroll
+        if (scrollValue <= 800) {
+            duende.style.transform = `translateY(${scrollValue * speed}px)`;
+        }
+    });
+});

@@ -296,7 +296,7 @@ nav {
   width: 553px;
   height: 921px;
   left: 712px;
-  top: 132.5px;
+  top: -50px;
   position: absolute;
   z-index: 10;
 }
@@ -668,3 +668,8 @@ footer img{
     min-height: 400px;
   }
 
+/*------------------Duende---------------------*/
+
+.duende {
+  transition: transform 0.5s ease-out;
+}
