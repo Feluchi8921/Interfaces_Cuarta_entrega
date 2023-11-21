@@ -426,13 +426,6 @@ nav {
   z-index: -2;
 }
 
-.cardM1,
-.cardM2,
-.cardM3,
-.cardM4 {
-  width: 100%;
-  display: flex;
-}
 .tituloCardM {
   margin-top: 254.5px;
   margin-bottom: 69px;
@@ -457,11 +450,11 @@ nav {
   height: 308.2px;
 }
 
-.textoCardM {
+p.CardM {
   margin-left: 57px;
 }
 
-.textoCardM h3 {
+.contenedor h3 {
   margin-bottom: 25px;
 }
 /*------------------Fondo Negro-----------------*/
@@ -639,3 +632,39 @@ footer img{
   margin-top: 38px;
   margin-bottom: 120px;
 }
+
+
+  /*---------Animacion Scroll section contenedor---------*/
+  section.contenedor{
+    width: 1080px;
+    min-height: 400px;
+    margin-left: 100px;
+    margin-right: 100px;
+    overflow: hidden;
+    background-position: 0 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  section#cont1, section#cont2, section#cont3, section#cont4{
+    margin-top: 40px;
+    align-items: center;
+  }
+  section#cont1{
+    background-image: url(img/cardM1.svg);
+  }
+  section#cont2{
+    background-image: url(img/cardM2.svg);
+  }
+  section#cont3{
+    background-image: url(img/cardM3.svg);
+  }
+  section#cont4{
+    background-image: url(img/cardM4.svg);
+  }
+  section.texto{
+    float:right;
+    width: 50%;
+    min-height: 400px;
+  }
+
