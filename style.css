@@ -680,3 +680,34 @@ footer img{
   color: white;
 }
 
+/*------------Animacion on hover personajes--------*/
+#chica2:hover {
+  transform: skew(10deg) scale(1.3) translate(-20px);
+}
+
+#chica2 {
+  transition: transform 1s;
+}
+
+#spideyNegro2:hover {
+  transform: rotate(20deg) skew(7deg) scale(1.3) translate(30px);
+}
+
+#spideyNegro2 {
+  transition: transform 1s;
+}
+
+#spidey2:hover {
+  transform: rotate(30deg) skew(5deg) scale(1.5);
+}
+
+#spidey2 {
+  transition: transform 1s;
+}
+
+#spideys:hover{
+  background-image: url(img/telaArania.svg);
+}
+#spideys{
+  transition: 3s;
+}
