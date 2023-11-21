@@ -157,6 +157,8 @@ nav {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
+  -webkit-text-stroke: 1.5px;
+  letter-spacing: 2.20px;
   box-shadow: 4px 5px 0px var(--azulSombra2);
   cursor: pointer;
 }
