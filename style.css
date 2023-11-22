@@ -752,3 +752,13 @@ footer img{
 .menu-hamburguesa.cruz .linea2 {
   opacity: 0;
 }
+
+/*-------------------Menu achicar-----------*/
+.achicar{
+  height: 50%;               /*Achicamos el header y lo opacamos para que no moleste*/
+  opacity: 0.6;
+}
+
+.menuAchicar:hover{
+  opacity: 1;               /*Al pasar el mouse se activa nuevamente el header*/
+}

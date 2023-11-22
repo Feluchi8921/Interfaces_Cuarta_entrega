@@ -41,3 +41,19 @@ const menuHamburguesa = document.querySelector(".menu-hamburguesa");
 menuHamburguesa.addEventListener("click", () => {
   menuHamburguesa.classList.toggle("cruz");
 });
+
+/*------------------------Menu achicable------------*/
+const menuAchicar = document.querySelectorAll(".menuAchicar");
+const achicarMenuHamburguesa = document.querySelectorAll(".achicarMenuHamburguesa");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 600) {
+    menuAchicar.forEach(element => {
+      element.classList.add("achicar");
+    });
+  } else {
+    menuAchicar.forEach(element => {
+      element.classList.remove("achicar");
+    });
+  }
+});
