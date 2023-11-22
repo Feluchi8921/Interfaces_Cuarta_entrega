@@ -34,3 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+/*----------------Menu hamburguesa cruz-----------------*/
+const menuHamburguesa = document.querySelector(".menu-hamburguesa");
+
+menuHamburguesa.addEventListener("click", () => {
+  menuHamburguesa.classList.toggle("cruz");
+});
