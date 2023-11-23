@@ -102,6 +102,7 @@ body {
 
 header {
   background-color: var(--azulSombra1);
+  z-index: 10;
 }
 .stick {
   position: sticky;
@@ -110,7 +111,7 @@ header {
 }
 .azul {
   width: 1280px;
-  height: 227px;
+  height: 300px;
   left: 0px;
   top: 0px;
   position: absolute;
@@ -167,7 +168,7 @@ nav {
 
 .portada {
   width: 1280px;
-  height: 720px;
+  height: 750px;
   background-image: url(img/cielo.svg);
   z-index: 1;
 }
@@ -177,19 +178,18 @@ nav {
   left: 330px;
   top: 91px;
   position: absolute;
-  z-index: 100000 !important; /*no me lo toma*/
 }
 .edificioIzq {
   width: 452px;
   height: 720px;
-  left: -47px;
-  top: 144px;
+  left: -25px;
+  top: 180px;
   position: absolute;
 }
 .edificio {
   width: 543.5px;
   height: 213.5px;
-  left: 392px;
+  left: 370px;
   top: 634px;
   position: absolute;
 }
@@ -222,6 +222,7 @@ nav {
   left: 404px;
   top: 403px;
   position: absolute;
+  z-index: 5;
 }
 
 .cielo {
@@ -258,7 +259,7 @@ nav {
   width: 1280px;
   height: 844.5px;
   background-image: url(img/violeta.svg);
-  top: 788px;
+  top: 785px;
   position: absolute;
   z-index: 2;
 }
@@ -510,7 +511,7 @@ p.CardM {
 .buscadorBorde {
   background: white;
   box-shadow: 4px 5px 0px #02187e;
-  border-radius: 50px;
+  border-radius: 111px;
   border: 9px #2982ff solid;
   display: flex;
 }
@@ -762,3 +763,31 @@ footer img{
 .menuAchicar:hover{
   opacity: 1;               /*Al pasar el mouse se activa nuevamente el header*/
 }
+
+#chica{
+  transform-origin: 50 50;  
+  left: 90px;
+  opacity: 0px;
+  top: 388px;
+  transition: 5s;
+}
+#spideyCental{
+  transform-origin: 50 50;
+  left: 404px;
+  top: 403px;
+  opacity: 0px;
+  transition: 5s;
+}
+
+#spideyNegro{
+  transform-origin: 50 50;
+  left: 695px;
+  top: 335px;
+  opacity: 0px;
+  transition: 2s;
+}
+
+#cuerdaDerecha, #cuerdaIzquierda{
+  transition: 1s;
+}
+
