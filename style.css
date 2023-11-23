@@ -172,6 +172,7 @@ nav {
   background-image: url(img/cielo.svg);
   z-index: 1;
 }
+
 .spidey {
   width: 590px;
   height: 301px;
@@ -791,3 +792,20 @@ footer img{
   transition: 1s;
 }
 
+#edicioIzq{
+  top: 180px;
+}
+
+
+#edificioDer{
+  left: 906px;
+  top: 126px;
+}
+
+#spidey{
+  width: 590px;
+  height: 301px;
+  left: 330px;
+  top: 91px;
+  transition: 1s;
+}

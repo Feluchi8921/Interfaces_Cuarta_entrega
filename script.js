@@ -81,14 +81,14 @@ cuerdaDerecha.style.opacity=0;
 
 window.addEventListener("scroll", ()=>{
     let scroll = window.scrollY;
-    if(scroll>=0 && scroll<200){
+    if(scroll>=0 && scroll<150){
         chica.style.opacity = scroll * 0.5;
         spideyCentral.style.opacity = scroll * 0.5;
         spideyNegro.style.opacity = scroll * 0.5;
         cuerdaDerecha.style.opacity = scroll * 0.8;
-        cuerdaIzquierda.style.opacity = scroll * 0.8;
-    }
-    if(scroll>=200 && scroll<=350){
+        cuerdaIzquierda.style.opacity = scroll * 0.8;;
+}
+    if(scroll>=150 && scroll<=350){
         cuerdaIzquierda.style.opacity=0;
         cuerdaDerecha.style.opacity=0;
 
@@ -97,6 +97,9 @@ window.addEventListener("scroll", ()=>{
 
         
         spideyCentral.style.left = scroll * 2 + "px";
+        edificioIzq.style.top = scroll * 0.8 + "px";
+
+        edificioDer.style.top = scroll * 0.85 + "px";
 
         
         spideyNegro.style.left = scroll * 3 + "px";
