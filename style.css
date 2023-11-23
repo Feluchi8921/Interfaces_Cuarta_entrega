@@ -791,3 +791,7 @@ footer img{
   transition: 1s;
 }
 
+.card {
+  opacity: 0; /* Inicialmente transparente */
+  transition: opacity 0.8s ease-in-out; /* Agregamos una transición suave */
+}

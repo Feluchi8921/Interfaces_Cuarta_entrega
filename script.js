@@ -58,7 +58,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-/*-------------------Parallax-------------*/
+/*-------------------Parallax Portada-------------*/
 
 const spidey = document.querySelector("#spidey");
 const edificioIzq = document.querySelector("#edificioIzq");
@@ -105,3 +105,25 @@ window.addEventListener("scroll", ()=>{
     }
     
 })
+/*-------Cards chicas---------*/
+// Obtener las cards
+const card1 = document.getElementById("card1");
+const card2 = document.getElementById("card2");
+const card3 = document.getElementById("card3");
+      
+window.addEventListener("scroll", ()=>{
+    let scroll = window.scrollY;
+    if(scroll>=1150){
+  // Función para mostrar la card con un retraso
+  function showCard(card, delay) {
+    setTimeout(function () {
+      card.style.opacity = 1;
+    }, delay);
+  }
+
+  // Mostrar cada card con un retraso diferente
+  showCard(card1, 500); // Card 1 aparece después de 500ms
+  showCard(card2, 1000); // Card 2 aparece después de 1000ms
+  showCard(card3, 1500); // Card 3 aparece después de 1500ms
+}
+  });
