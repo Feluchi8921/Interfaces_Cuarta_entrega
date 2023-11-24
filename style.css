@@ -579,6 +579,7 @@ p.CardM {
 }
 .textoTeen {
   margin-left: 302px;
+  margin-right: 400px;
 }
 
 .escenaFinal {
@@ -611,12 +612,13 @@ p.CardM {
 }
 /*--------------Footer--------------*/
 footer {
-  width: 1280px;
+  width: 100%;
   padding-top: 38px;
-  padding-left: 100px;
-  padding-right: 100px;
   background-color: #5e5e5d;
   text-align: left;
+}
+footer p, footer img{
+  margin-left: 100px;
 }
 
 footer p {
@@ -794,4 +796,25 @@ footer img{
 .card {
   opacity: 0; /* Inicialmente transparente */
   transition: opacity 0.8s ease-in-out; /* Agregamos una transición suave */
+}
+.tarjeta {
+  transition: opacity 0.8s ease-in-out; /* Agregamos una transición suave */
+}
+
+#test1{
+  top: -150px;
+  transform: rotate(0deg) skew(0deg) scale(0);
+  transition:  top  0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+#test2{
+  top:20px;
+  transform: rotate(0deg) skew(0deg) scale(0);
+  transition:  top  0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#test3{
+  top: 180px;
+  transform: rotate(0deg) skew(0deg) scale(0);
+  transition:  top  0.5s ease-in-out, transform 0.5s ease-in-out;
 }

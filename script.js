@@ -127,3 +127,39 @@ window.addEventListener("scroll", ()=>{
   showCard(card3, 1500); // Card 3 aparece después de 1500ms
 }
   });
+
+
+  /*--------------------Tarjetas test--------*/
+const test1 = document.getElementById("test1");
+const test2 = document.getElementById("test2");
+const test3 = document.getElementById("test3");
+      
+window.addEventListener("scroll", ()=>{
+    let scroll = window.scrollY;
+
+    if(scroll>=2000 && scroll<2900){
+
+    function showTest1(test1, delay) {
+      setTimeout(function () {
+      test1.style.top = scroll * 0.0005 +"px";
+      test1.style.transform = `scale(${scroll * 0.001}deg)`;
+    }, delay);}
+
+    function showTest2(test2, delay) {
+        setTimeout(function () {
+      test2.style.top = scroll * 0.0005 +"px";
+      test2.style.transform = `skew(${scroll * 0.001}deg)`;
+    }, delay);}
+
+    function showTest3(test3, delay) {
+        setTimeout(function () {
+      test3.style.top = scroll * 0.0005 +"px";
+      test3.style.transform = `skew(${scroll * 0.001}deg)`;
+    }, delay);}
+
+    }
+  // Mostrar cada card con un retraso diferente
+  showTest1(test1, 200); // Card 1 aparece después de 500ms
+  showTest2(test2, 400); // Card 2 aparece después de 1000ms
+  showTest3(test3, 600); // Card 3 aparece después de 1500ms
+});
