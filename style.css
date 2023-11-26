@@ -43,8 +43,12 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 /*------------------------------------------*/
 :root {
@@ -159,7 +163,7 @@ nav {
   text-transform: uppercase;
   font-weight: bold;
   -webkit-text-stroke: 1.5px;
-  letter-spacing: 2.20px;
+  letter-spacing: 2.2px;
   box-shadow: 4px 5px 0px var(--azulSombra2);
   cursor: pointer;
 }
@@ -356,8 +360,8 @@ nav {
 .test2 {
   width: 800px;
   height: 500px;
-  left:-40px;
-  top:20px;
+  left: -40px;
+  top: 20px;
   position: absolute;
 }
 
@@ -365,7 +369,7 @@ nav {
   width: 800px;
   height: 500px;
   top: 180px;
-  left:-40px;
+  left: -40px;
   position: absolute;
 }
 
@@ -587,30 +591,7 @@ p.CardM {
   width: 1280px;
   height: 720px;
 }
-.spideyMini {
-  width: 94px;
-  height: 88px;
-  left: 998px;
-  top: 8023px;
-  position: absolute;
-  mix-blend-mode: darken;
-}
 
-.spideyNegroMini {
-  width: 97px;
-  height: 89px;
-  left: 219px;
-  top: 8190px;
-  position: absolute;
-}
-
-.chicaMini {
-  width: 58px;
-  height: 64px;
-  left: 533px;
-  top: 8126px;
-  position: absolute;
-}
 /*--------------Footer--------------*/
 footer {
   width: 100%;
@@ -618,7 +599,8 @@ footer {
   background-color: #5e5e5d;
   text-align: left;
 }
-footer p, footer img{
+footer p,
+footer img {
   margin-left: 100px;
 }
 
@@ -635,44 +617,46 @@ footer p {
   height: 361px;
 }
 
-footer img{
+footer img {
   margin-top: 38px;
   margin-bottom: 120px;
 }
 
+/*---------Animacion Scroll section contenedor---------*/
+section.contenedor {
+  width: 1080px;
+  min-height: 400px;
+  margin-left: 100px;
+  margin-right: 100px;
+  overflow: hidden;
+  background-position: 0 50%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
 
-  /*---------Animacion Scroll section contenedor---------*/
-  section.contenedor{
-    width: 1080px;
-    min-height: 400px;
-    margin-left: 100px;
-    margin-right: 100px;
-    overflow: hidden;
-    background-position: 0 50%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
-
-  section#cont1, section#cont2, section#cont3, section#cont4{
-    margin-top: 40px;
-  }
-  section#cont1{
-    background-image: url(img/cardM1.svg);
-  }
-  section#cont2{
-    background-image: url(img/cardM2.svg);
-  }
-  section#cont3{
-    background-image: url(img/cardM3.svg);
-  }
-  section#cont4{
-    background-image: url(img/cardM4.svg);
-  }
-  section.texto{
-    float:right;
-    width: 50%;
-    min-height: 400px;
-  }
+section#cont1,
+section#cont2,
+section#cont3,
+section#cont4 {
+  margin-top: 40px;
+}
+section#cont1 {
+  background-image: url(img/cardM1.svg);
+}
+section#cont2 {
+  background-image: url(img/cardM2.svg);
+}
+section#cont3 {
+  background-image: url(img/cardM3.svg);
+}
+section#cont4 {
+  background-image: url(img/cardM4.svg);
+}
+section.texto {
+  float: right;
+  width: 50%;
+  min-height: 400px;
+}
 
 /*------------------Duende---------------------*/
 
@@ -681,7 +665,8 @@ footer img{
 }
 
 /*-------------------Btn comprar-----------*/
-.btn-comprar:active, .btn-comprar:hover{
+.btn-comprar:active,
+.btn-comprar:hover {
   background: linear-gradient(180deg, var(--azul), orange);
   color: white;
 }
@@ -711,10 +696,10 @@ footer img{
   transition: transform 1s;
 }
 
-#spideys:hover{
+#spideys:hover {
   background-image: url(img/telaArania.svg);
 }
-#spideys{
+#spideys {
   transition: 3s;
 }
 
@@ -758,23 +743,23 @@ footer img{
 }
 
 /*-------------------Menu achicar-----------*/
-.achicar{
-  height: 50%;               /*Achicamos el header y lo opacamos para que no moleste*/
+.achicar {
+  height: 50%; /*Achicamos el header y lo opacamos para que no moleste*/
   opacity: 0.6;
 }
 
-.menuAchicar:hover{
-  opacity: 1;               /*Al pasar el mouse se activa nuevamente el header*/
+.menuAchicar:hover {
+  opacity: 1; /*Al pasar el mouse se activa nuevamente el header*/
 }
 
-#chica{
-  transform-origin: 50 50;  
+#chica {
+  transform-origin: 50 50;
   left: 90px;
   opacity: 0px;
   top: 388px;
   transition: 5s;
 }
-#spideyCental{
+#spideyCental {
   transform-origin: 50 50;
   left: 404px;
   top: 403px;
@@ -782,7 +767,7 @@ footer img{
   transition: 5s;
 }
 
-#spideyNegro{
+#spideyNegro {
   transform-origin: 50 50;
   left: 695px;
   top: 335px;
@@ -790,24 +775,25 @@ footer img{
   transition: 2s;
 }
 
-#cuerdaDerecha, #cuerdaIzquierda{
+#cuerdaDerecha,
+#cuerdaIzquierda {
   transition: 1s;
 }
 
 .card {
   opacity: 0; /* Inicialmente transparente */
   transition: opacity 0.8s ease-in-out; /* Agregamos una transición suave */
-}#edicioIzq{
+}
+#edicioIzq {
   top: 180px;
 }
 
-
-#edificioDer{
+#edificioDer {
   left: 906px;
   top: 126px;
 }
 
-#spidey{
+#spidey {
   width: 590px;
   height: 301px;
   left: 330px;
@@ -818,41 +804,128 @@ footer img{
   transition: opacity 0.8s ease-in-out; /* Agregamos una transición suave */
 }
 
-#test1{
+#test1 {
   top: -150px;
   transform: rotate(0deg) skew(0deg) scale(0);
-  transition:  top  0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: top 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
-#test2{
-  top:20px;
+#test2 {
+  top: 20px;
   transform: rotate(0deg) skew(0deg) scale(0);
-  transition:  top  0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-#test3{
+#test3 {
   top: 180px;
   transform: rotate(0deg) skew(0deg) scale(0);
-  transition:  top  0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .tarjeta {
   transition: opacity 0.8s ease-in-out; /* Agregamos una transición suave */
 }
 
-#test1{
+#test1 {
   top: -150px;
   transform: rotate(0deg) skew(0deg) scale(0);
-  transition:  top  0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: top 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
-#test2{
-  top:20px;
+#test2 {
+  top: 20px;
   transform: rotate(0deg) skew(0deg) scale(0);
-  transition:  top  0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-#test3{
+#test3 {
   top: 180px;
   transform: rotate(0deg) skew(0deg) scale(0);
-  transition:  top  0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.spideyMini {
+  left: 780px;
+  top: 7760px;
+  position: absolute;
+  mix-blend-mode: darken;
+  background-image: url("img/spideyMini.png");
+  width: 58.333px; 
+  height: 130px;
+  margin: 200px;
+  transform: scale(2);
+}
+
+.spideyMini:hover{
+  left: 780px;
+  top: 7760px;
+  position: absolute;
+  mix-blend-mode: darken;
+  width: 58.333px; /* Aumenté el ancho del contenedor */
+  height: 130px;
+  margin: 200px;
+  background-image: url("img/spideyMini.png");
+  animation: sprite3 1s steps(6) infinite;
+  transform: scale(2);
+}
+
+@keyframes sprite3 {
+  0% {
+      background-position-x: -8px;
+  }
+  100% {
+      background-position-x: 350px; /* Ancho de la imagen */
+  }
+}
+.chicaMini{
+  left: 533px;
+  top: 8070px;
+  position: absolute;
+  width: 90px; 
+  height: 112px;
+  background-image: url('img/chicaMini.png');
+}
+.chicaMini:hover{
+  left: 533px;
+  top: 8070px;
+  position: absolute;
+  width: 90px; 
+  height: 112px;
+  background-image: url('img/chicaMini.png');
+  animation: sprite1 1s steps(6) infinite;
+}
+@keyframes sprite1 {
+  0% {
+      background-position-x: -10px;
+  }
+  100% {
+      background-position-x: 575px; 
+}
+}
+.spideyNegroMini{
+  width: 38px;
+  height:75px;
+  background-image: url('img/spideyNegroMini.png');
+  left: 280px;
+  top: 8190px;
+  position: absolute;
+  transform: rotate(5deg);
+}
+.spideyNegroMini:hover {
+  width: 38px;
+  height:75px;
+  background-image: url('img/spideyNegroMini.png');
+  animation: sprite4 1s steps(7) infinite;
+  left: 280px;
+  top: 8190px;
+  position: absolute;
+  transform: rotate(5deg);
+}
+
+@keyframes sprite4 {
+  0% {
+      background-position-x: 4px;
+  }
+  100% {
+      background-position-x: 285px; /* Cambié a un valor negativo para que se mueva hacia la izquierda */
+  }
 }
