@@ -806,9 +806,6 @@ section.texto {
   top: 91px;
   transition: 1s;
 }
-.tarjeta {
-  transition: opacity 1s ease-in-out; /* Agregamos una transición suave */
-}
 
 #test1 {
   top: -150px;
@@ -821,6 +818,14 @@ section.texto {
 #test3 {
   top: 150px;
 }
+
+#seccion2{
+  perspective: 1000px;
+}
+.test1:hover, .test2:hover, .test3:hover{
+  transform: rotateY(20deg);
+}
+
 
 
 .spideyMini {
