@@ -903,3 +903,44 @@ section.texto {
       background-position-x: 285px; /* Cambié a un valor negativo para que se mueva hacia la izquierda */
   }
 }
+/* Asegúrate de que la clase 'menu-desplegado' esté inicialmente oculta */
+.menu-desplegado {
+  display: block;
+}
+
+/* Añade un estilo para mostrar 'menu-desplegado' cuando tiene la clase 'desplegar' */
+.desplegar.menu-desplegado {
+  display: none;
+}
+
+#menu {
+  margin-top: 50px;
+  width: max-content;
+  height: max-content;
+  background-color: var(--azulSombra1);
+  position: absolute;
+  min-width: 0px;
+  padding: 20px;
+  align-items: flex-start;
+  color: var(--amarillo);
+  font-size: 20px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.items{
+  margin-bottom: 8px;
+}
+
+.imgItem{
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.imgItem:hover{
+  transform: rotate(90deg);
+}
+a {
+  text-decoration: none;
+  color: var(--amarillo);
+}

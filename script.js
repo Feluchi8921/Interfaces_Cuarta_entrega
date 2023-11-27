@@ -37,10 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*----------------Menu hamburguesa cruz-----------------*/
 const menuHamburguesa = document.querySelector(".menu-hamburguesa");
+const menuDesplegado = document.querySelector(".menu-desplegado");
 
 menuHamburguesa.addEventListener("click", () => {
   menuHamburguesa.classList.toggle("cruz");
+  menuDesplegado.classList.toggle("desplegar");
 });
+
 
 /*------------------------Menu achicable------------*/
 const menuAchicar = document.querySelectorAll(".menuAchicar");
