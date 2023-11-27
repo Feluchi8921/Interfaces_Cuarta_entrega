@@ -241,11 +241,17 @@ nav {
 .cuerdaDerecha {
   width: 400px;
   height: 372.44px;
+  position: relative;
+  transform: rotate(0%);
+  transform-origin: 0 0;
+}
+.contenedorCuerda{
+  width: 280px;
+  height: 372.44px;
   left: 1000px;
   top: 400px;
   position: absolute;
-  transform: rotate(0%);
-  transform-origin: 0 0;
+  overflow: hidden;
 }
 
 .cuerdaIzquierda {
@@ -913,6 +919,7 @@ section.texto {
   display: none;
 }
 
+/*-----------------Menu desplegable-------------------*/
 #menu {
   margin-top: 50px;
   width: max-content;

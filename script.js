@@ -73,66 +73,121 @@ const spideyCentral = document.querySelector("#spideyCentral");
 const cuerdaDerecha = document.querySelector("#cuerdaDerecha");
 const cuerdaIzquierda = document.querySelector("#cuerdaIzquierda");
 
-chica.style.opacity=0;
-spideyCentral.style.opacity=0;
-spideyNegro.style.opacity=0;
-cuerdaDerecha.style.opacity=0;
-cuerdaIzquierda.style.opacity=0;
+// Guardar los valores originales para cada elemento
+const originalValues = {
+  chica: { left: chica.style.left, top: chica.style.top },
+  spideyCentral: { left: spideyCentral.style.left },
+  edificioIzq: { top: edificioIzq.style.top },
+  edificioDer: { top: edificioDer.style.top },
+  spideyNegro: { left: spideyNegro.style.left, skew: spideyNegro.style.skew },
+  cuerdaDerecha: { opacity: cuerdaDerecha.style.opacity },
+  cuerdaIzquierda: { opacity: cuerdaIzquierda.style.opacity },
+};
 
-cuerdaIzquierda.style.opacity=0;
-cuerdaDerecha.style.opacity=0;
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
 
-window.addEventListener("scroll", ()=>{
-    let scroll = window.scrollY;
-    if(scroll>=0 && scroll<150){
-        chica.style.opacity = scroll * 0.5;
-        spideyCentral.style.opacity = scroll * 0.5;
-        spideyNegro.style.opacity = scroll * 0.5;
-        cuerdaDerecha.style.opacity = scroll * 0.8;
-        cuerdaIzquierda.style.opacity = scroll * 0.8;;
+  if (scroll >= 0 && scroll < 150) {
+    // Restablecer valores originales
+    resetOriginalValues();
+    // Aplicar transformaciones para el primer rango
+    applyTransformations1(scroll);
+  }
+
+  if (scroll >= 150 && scroll <= 350) {
+    // Restablecer valores originales
+    resetOriginalValues();
+    // Aplicar transformaciones para el segundo rango
+    applyTransformations2(scroll);
+  }
+
+  if (scroll > 350) {
+    // Restablecer valores originales
+    resetOriginalValues();
+  }
+});
+
+function applyTransformations1(scroll) {
+  chica.style.opacity = scroll * 0.5;
+  spideyCentral.style.opacity = scroll * 0.5;
+  spideyNegro.style.opacity = scroll * 0.5;
+  cuerdaDerecha.style.opacity = scroll * 0.8;
+  cuerdaIzquierda.style.opacity = scroll * 0.8;
 }
-    if(scroll>=150 && scroll<=350){
-        cuerdaIzquierda.style.opacity=0;
-        cuerdaDerecha.style.opacity=0;
 
-        chica.style.left = scroll * 3 + "px";
-        chica.style.top = scroll * 3 + "px";
+function applyTransformations2(scroll) {
+  cuerdaIzquierda.style.opacity = 0;
+  cuerdaDerecha.style.opacity = 0;
 
-        
-        spideyCentral.style.left = scroll * 2 + "px";
-        edificioIzq.style.top = scroll * 0.8 + "px";
+  chica.style.left = scroll * 3 + "px";
+  chica.style.top = scroll * 3 + "px";
 
-        edificioDer.style.top = scroll * 0.85 + "px";
+  spideyCentral.style.left = scroll * 2 + "px";
+  edificioIzq.style.top = scroll * 0.8 + "px";
 
-        
-        spideyNegro.style.left = scroll * 3 + "px";
-        spideyNegro.style.skew = scroll*0.1 +"deg";
+  edificioDer.style.top = scroll * 0.85 + "px";
 
-    }
-    
-})
+  spideyNegro.style.left = scroll * 3 + "px";
+  spideyNegro.style.skew = scroll * 0.1 + "deg";
+}
+
+function resetOriginalValues() {
+  chica.style.left = originalValues.chica.left;
+  chica.style.top = originalValues.chica.top;
+
+  spideyCentral.style.left = originalValues.spideyCentral.left;
+  edificioIzq.style.top = originalValues.edificioIzq.top;
+
+  edificioDer.style.top = originalValues.edificioDer.top;
+
+  spideyNegro.style.left = originalValues.spideyNegro.left;
+  spideyNegro.style.skew = originalValues.spideyNegro.skew;
+
+  cuerdaDerecha.style.opacity = originalValues.cuerdaDerecha.opacity;
+  cuerdaIzquierda.style.opacity = originalValues.cuerdaIzquierda.opacity;
+}
+
 /*-------Cards chicas---------*/
 // Obtener las cards
 const card1 = document.getElementById("card1");
 const card2 = document.getElementById("card2");
 const card3 = document.getElementById("card3");
-      
-window.addEventListener("scroll", ()=>{
-    let scroll = window.scrollY;
-    if(scroll>=1150){
-  // Función para mostrar la card con un retraso
-  function showCard(card, delay) {
-    setTimeout(function () {
-      card.style.opacity = 1;
-    }, delay);
-  }
 
-  // Mostrar cada card con un retraso diferente
-  showCard(card1, 500); // Card 1 aparece después de 500ms
-  showCard(card2, 1000); // Card 2 aparece después de 1000ms
-  showCard(card3, 1500); // Card 3 aparece después de 1500ms
+// Obtener las posiciones originales de las cards
+const originalPositions = {
+  card1: { opacity: card1.style.opacity },
+  card2: { opacity: card2.style.opacity },
+  card3: { opacity: card3.style.opacity },
+};
+
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+
+  // Verificar si el scroll está entre 1150 y 2400 px
+  if (scroll >= 1150 && scroll <= 2400) {
+    // Función para mostrar la card con un retraso
+    function showCard(card, delay) {
+      setTimeout(function () {
+        card.style.opacity = 1;
+      }, delay);
+    }
+
+    // Mostrar cada card con un retraso diferente
+    showCard(card1, 500); // Card 1 aparece después de 500ms
+    showCard(card2, 1000); // Card 2 aparece después de 1000ms
+    showCard(card3, 1500); // Card 3 aparece después de 1500ms
+  } else if (scroll > 2400) {
+    // Restaurar las posiciones originales
+    resetOriginalPositions();
+  }
+});
+
+function resetOriginalPositions() {
+  card1.style.opacity = originalPositions.card1.opacity;
+  card2.style.opacity = originalPositions.card2.opacity;
+  card3.style.opacity = originalPositions.card3.opacity;
 }
-  });
+
 
 
 /*--------------------Tarjetas test--------*/
