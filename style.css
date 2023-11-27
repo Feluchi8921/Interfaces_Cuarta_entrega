@@ -801,47 +801,21 @@ section.texto {
   transition: 1s;
 }
 .tarjeta {
-  transition: opacity 0.8s ease-in-out; /* Agregamos una transición suave */
+  transition: opacity 1s ease-in-out; /* Agregamos una transición suave */
 }
 
 #test1 {
   top: -150px;
-  transform: rotate(0deg) skew(0deg) scale(0);
-  transition: top 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 #test2 {
   top: 20px;
-  transform: rotate(0deg) skew(0deg) scale(0);
-  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 #test3 {
-  top: 180px;
-  transform: rotate(0deg) skew(0deg) scale(0);
-  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-.tarjeta {
-  transition: opacity 0.8s ease-in-out; /* Agregamos una transición suave */
+  top: 150px;
 }
 
-#test1 {
-  top: -150px;
-  transform: rotate(0deg) skew(0deg) scale(0);
-  transition: top 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-#test2 {
-  top: 20px;
-  transform: rotate(0deg) skew(0deg) scale(0);
-  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-#test3 {
-  top: 180px;
-  transform: rotate(0deg) skew(0deg) scale(0);
-  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
 
 .spideyMini {
   left: 780px;

@@ -132,37 +132,60 @@ window.addEventListener("scroll", ()=>{
   });
 
 
-  /*--------------------Tarjetas test--------*/
+/*--------------------Tarjetas test--------*/
 const test1 = document.getElementById("test1");
 const test2 = document.getElementById("test2");
 const test3 = document.getElementById("test3");
-      
-window.addEventListener("scroll", ()=>{
-    let scroll = window.scrollY;
 
-    if(scroll>=2000 && scroll<2900){
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
 
-    function showTest1(test1, delay) {
-      setTimeout(function () {
-      test1.style.top = scroll * 0.0005 +"px";
-      test1.style.transform = `scale(${scroll * 0.001}deg)`;
-    }, delay);}
+  if (scroll >= 2200 && scroll < 2900) {
+    // Mostrar cada card con un retraso diferente
+    showTest1(test1, 200); // Card 1 aparece después de 200ms
+    showTest2(test2, 400); // Card 2 aparece después de 600ms
+    showTest3(test3, 600); // Card 3 aparece después de 800ms
+  } else if (scroll >= 2900 || scroll<2200) {
+    // Restablecer la posición y las transformaciones cuando el scroll supera los 2900 px
+    resetTest1(test1);
+    resetTest2(test2);
+    resetTest3(test3);
+  }
 
-    function showTest2(test2, delay) {
-        setTimeout(function () {
-      test2.style.top = scroll * 0.0005 +"px";
-      test2.style.transform = `skew(${scroll * 0.001}deg)`;
-    }, delay);}
+  function showTest1(test1, delay) {
+    setTimeout(function () {
+      test1.style.top = scroll * 0.001 + "px";
+      test1.style.transform = `rotate(${scroll * 0.003}deg)`;
+    }, delay);
+  }
 
-    function showTest3(test3, delay) {
-        setTimeout(function () {
-      test3.style.top = scroll * 0.0005 +"px";
-      test3.style.transform = `skew(${scroll * 0.001}deg)`;
-    }, delay);}
+  function showTest2(test2, delay) {
+    setTimeout(function () {
+      test2.style.top = scroll * 0.006 + "px";
+      test2.style.transform = `skew(${scroll * 0.003}deg) rotate(${scroll * 0.003}deg)`;
+    }, delay);
+  }
 
-    }
-  // Mostrar cada card con un retraso diferente
-  showTest1(test1, 200); // Card 1 aparece después de 500ms
-  showTest2(test2, 400); // Card 2 aparece después de 1000ms
-  showTest3(test3, 600); // Card 3 aparece después de 1500ms
+  function showTest3(test3, delay) {
+    setTimeout(function () {
+      test3.style.top = scroll * 0.01 + "px";
+      test3.style.transform = `skew(${scroll * 0.003}deg) rotate(${scroll * 0.003}deg)`;
+    }, delay);
+  }
+
+  // Funciones para restablecer las tarjetas a su posición y transformación inicial
+  function resetTest1(test1) {
+    test1.style.top = "-150px";
+    test1.style.transform = "scale(1) rotate(0deg)";
+  }
+
+  function resetTest2(test2) {
+    test2.style.top = "20px";
+    test2.style.transform = "skew(0deg) rotate(0deg)";
+  }
+
+  function resetTest3(test3) {
+    test3.style.top = "150px";
+    test3.style.transform = "skew(0deg) rotate(0deg)";
+  }
 });
