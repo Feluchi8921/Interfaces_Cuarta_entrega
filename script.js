@@ -252,3 +252,59 @@ function resetTest3(test3) {
 }
 });
 
+/*----------------------Parallax mouse----------------- */
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+window.addEventListener('mousemove', function(e) {
+   
+    if (scroll >= 3000 && scroll < 3800) {
+// Cálculos de Parallax para cada elemento, ajustados para adaptabilidad
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+  let scrollTop = window.scrollY;
+  // Objetos con las clases y sus propiedades de movimiento
+  const objetos = {
+    '.transformer': {
+      velocidadX: 0.05, // Ajustar la velocidad de desplazamiento en X
+      velocidadY: -0.05, // Ajustar la velocidad de desplazamiento en Y
+      rotacion: 0.1, // Ajustar la velocidad de rotación
+    },
+    '.pastoCard3D': {
+      velocidadX: 0.01, // Añadido
+      velocidadY: -0.02,
+      escala: 1.2,
+    },
+    '.card3D': {
+      velocidadX: 0.02,
+      velocidadY: -0.02, // Ajustar la velocidad de desplazamiento en Y
+      
+    },
+    '.cieloCard3D': {
+      velocidadY: -0.01, // Ajustar la velocidad de desplazamiento en Y
+    },
+    '.hulk': {
+      velocidadX: 0.05,
+      velocidadY: 0.1, // Ajustar la velocidad de desplazamiento en Y
+      rotacion: 0.001, // Ajustar la velocidad de rotación
+    },
+    '.elastica': {
+      velocidadX: 0.05,
+      velocidadY: -0.1, // Ajustar la velocidad de desplazamiento en Y
+      rotacion: -0.1, // Ajustar la velocidad de rotación
+    },
+  };
+
+  for (const clase in objetos) {
+    const elemento = document.querySelector(clase);
+    const velocidadX = objetos[clase].velocidadX;
+    const velocidadY = objetos[clase].velocidadY;
+    const rotacion = objetos[clase].rotacion;
+
+    const offsetX = (mouseX - window.innerWidth / 2) * velocidadX;
+    const offsetY = (mouseY - window.innerHeight / 2) * velocidadY;
+
+    elemento.style.transform = `translateY(${offsetY}px) translateX(${offsetX}px) rotate(${scrollTop * rotacion}deg)`;
+  }
+}
+})
+});
