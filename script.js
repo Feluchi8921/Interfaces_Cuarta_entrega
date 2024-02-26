@@ -39,11 +39,22 @@ document.addEventListener("DOMContentLoaded", function () {
 /*----------------Menu hamburguesa cruz-----------------*/
 const menuHamburguesa = document.querySelector(".menu-hamburguesa");
 const menuDesplegado = document.querySelector(".menu-desplegado");
+const itemsMenu = document.querySelectorAll('.items');
 
 menuHamburguesa.addEventListener("click", () => {
+
 menuHamburguesa.classList.toggle("cruz");
 menuDesplegado.classList.toggle("desplegar");
+menuDesplegado.classList.toggle('mostrar');
+
+ // Mostrar los ítems del menú uno por uno
+ itemsMenu.forEach((item, index) => {
+  setTimeout(() => {
+    item.classList.add('mostrar');
+  }, index * 100);
 });
+});
+
 
 /*------------------------Menu achicable------------*/
 const menuAchicar = document.querySelectorAll(".menuAchicar");
@@ -310,3 +321,4 @@ window.addEventListener('mousemove', function(e) {
 }
 })
 });
+

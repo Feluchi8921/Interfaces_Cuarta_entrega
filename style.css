@@ -158,6 +158,37 @@ nav {
   margin-top: 20px;
   cursor: pointer;
 }
+/**/
+
+.menu-desplegado {
+  position: absolute;
+  top: 50px;
+  left: -150%; /* Oculta el menú al inicio */
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-color: var(--azulSombra1);
+  z-index: 100;
+  transition: all 0.5s ease-in-out;
+  
+  /* Animación para mostrar el menú */
+  &.mostrar {
+    left: 0;
+  }
+}
+
+.items {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.3s ease-in-out;
+  
+  /* Animación para mostrar cada ítem del menú */
+  &.mostrar {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/**/
+
 .menuSpidey {
   width: 113px;
   height: 68px;
