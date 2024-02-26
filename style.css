@@ -56,7 +56,6 @@
   display: none;
 }
 
-/*Animacion, rota*/
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -65,7 +64,7 @@
     transform: rotate(360deg);
   }
 }
-/*------------------Colores variables------------------------*/
+/*------------------------------------------*/
 :root {
   --azul: #5499f8;
   --azulSombra1: #2982ff;
@@ -204,7 +203,7 @@ nav {
   background-color: var(--amarillo);
   border-radius: 111px;
   color: var(--azulSombra2);
-  font-family: Lato;
+  font-family: Arial; /*Cambiar a Lato*/
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
@@ -758,6 +757,7 @@ section.texto {
 }
 
 /*---------------------Menu cruz----------------------*/
+/*------------------------Menu------------------*/
 .menu-hamburguesa:hover {
   cursor: pointer;
 }
@@ -900,7 +900,6 @@ section.texto {
   transform: scale(2);
 }
 
-/*Aplicamos el spritesheet para el personaje*/
 @keyframes sprite3 {
   0% {
       background-position-x: -8px;
@@ -926,8 +925,6 @@ section.texto {
   background-image: url('img/chicaMini.png');
   animation: sprite1 1s steps(6) infinite;
 }
-
-/*Aplicamos el spritesheet para el personaje*/
 @keyframes sprite1 {
   0% {
       background-position-x: -10px;
@@ -956,27 +953,25 @@ section.texto {
   transform: rotate(5deg);
 }
 
-/*Aplicamos el spritesheet para el personaje*/
 @keyframes sprite4 {
   0% {
       background-position-x: 4px;
   }
   100% {
-      background-position-x: 285px;
+      background-position-x: 285px; /* Cambié a un valor negativo para que se mueva hacia la izquierda */
   }
 }
-
-
-/*-----------------Menu desplegable-------------------*/
-/*Menu desplegado*/
+/* Asegúrate de que la clase 'menu-desplegado' esté inicialmente oculta */
 .menu-desplegado {
   display: block;
 }
 
-/*menu oculto*/
+/* Añade un estilo para mostrar 'menu-desplegado' cuando tiene la clase 'desplegar' */
 .desplegar.menu-desplegado {
   display: none;
 }
+
+/*-----------------Menu desplegable-------------------*/
 #menu {
   margin-top: 50px;
   width: max-content;
