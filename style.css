@@ -416,12 +416,14 @@ nav {
   left: 101.76px;
   top: 3452.11px;
   position: absolute;
+  transform: scale(1);
 }
 .cieloCard3D {
   width: 1077.06px;
   height: 527.63px;
   left: 120px;
   top: 3431px;
+  transform: scale(1);
   position: absolute;
   z-index: -4;
 }
@@ -438,7 +440,7 @@ nav {
 .elastica {
   width: 451.26px;
   height: 591.44px;
-  left: 128.16px;
+  left: 250px;
   top: 3454.54px;
   position: absolute;
   transform: rotate(-12.48deg);

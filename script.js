@@ -272,7 +272,7 @@ window.addEventListener('mousemove', function(e) {
     '.pastoCard3D': {
       velocidadX: 0.01, // Añadido
       velocidadY: -0.02,
-      escala: 1.2,
+      escala: 1.2, // Añadido
     },
     '.card3D': {
       velocidadX: 0.02,
@@ -280,7 +280,9 @@ window.addEventListener('mousemove', function(e) {
       
     },
     '.cieloCard3D': {
-      velocidadY: -0.01, // Ajustar la velocidad de desplazamiento en Y
+      velocidadX: 1, // Añadido
+      velocidadY: -1,
+      escala: 1.2, // Ajustar la velocidad de desplazamiento en Y
     },
     '.hulk': {
       velocidadX: 0.05,
@@ -288,8 +290,8 @@ window.addEventListener('mousemove', function(e) {
       rotacion: 0.001, // Ajustar la velocidad de rotación
     },
     '.elastica': {
-      velocidadX: 0.05,
-      velocidadY: -0.1, // Ajustar la velocidad de desplazamiento en Y
+      velocidadX: 0.05, // Ajustar la velocidad de desplazamiento en X
+      velocidadY: -0.05, // Ajustar la velocidad de desplazamiento en Y
       rotacion: -0.1, // Ajustar la velocidad de rotación
     },
   };
