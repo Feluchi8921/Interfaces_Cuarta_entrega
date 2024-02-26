@@ -8,9 +8,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 1280px;
   height: 100%;
-  background-image: url("img/fondoTela.jpg");
+  background-image: url("img/fondoTela2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -20,14 +20,7 @@
   z-index: 999;
 }
 
-.fondoAraña{
-  position: absolute;
-  top: 400px;
-  right: 200px;
-}
-.fondoAraña img{
-  width: 50px;
-  height: 50px;
+.menuInicio{
   animation: scale-image 6s infinite ease-in-out;
 }
 @keyframes scale-image {
@@ -35,14 +28,10 @@
     transform: scale(1); /* Tamaño original */
   }
   to {
-    transform: scale(8); /* Aumenta el tamaño al 150% */
+    transform: scale(5); /* Aumenta el tamaño al 150% */
   }
 }
 
-/* Trigger the animation */
-#loaderContainer.animate {
-  animation: scale-images 1s ease-in-out forwards; /* Animation duration and timing */
-}
 .loader {
   border: 8px solid var(--amarillo);
   border-top: 8px solid #3498db;
@@ -50,17 +39,17 @@
   width: 50px;
   height: 50px;
   animation: spin 1s linear infinite;
+  margin-top: 40px;
 }
 
 .loader-text {
   margin-top: 20px;
   color: white;
-  font-size: 20px;
-  font-family: Lato;
-  font-weight: 500;
-  line-height: 18.9px;
-  word-wrap: break-word;
+  font-size: 18px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-bottom: 50px;
+  font-weight: bold;
+  text-shadow: 0 0 2px black;
 }
 
 .content {
